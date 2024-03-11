@@ -31,4 +31,4 @@ Choose from popular categories like Programming, Countries, Animals, Movies, and
 
 Feel free to expand the game with new categories, words, or even implement a graphical interface to enhance the user experience.
 
-##Enjoy playing the game! Your feedback and contributions are welcome.
+## Enjoy playing the game! Your feedback and contributions are welcome.

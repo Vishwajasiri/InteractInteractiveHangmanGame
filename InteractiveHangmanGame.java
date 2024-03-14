@@ -71,14 +71,82 @@ public class InteractiveHangmanGame {
     }
 
     private void displayHangman() {
-        int incorrectGuessCount = incorrectGuesses.size();
+    int incorrectGuessCount = incorrectGuesses.size();
+    int remainingAttempts = MAX_INCORRECT_GUESSES - incorrectGuessCount;
 
-        System.out.println("Incorrect Guesses (" + incorrectGuessCount + "): " + incorrectGuesses);
+    System.out.println("Incorrect Guesses (" + incorrectGuessCount + "/" + MAX_INCORRECT_GUESSES + "): " + incorrectGuesses);
+    System.out.println("Remaining Attempts: " + remainingAttempts);
 
-        System.out.println("Hangman:");
-        // Add the hangman drawing logic here based on the incorrect guess count
-        // You can reuse the logic from the previous code snippet
+    System.out.println("Hangman:");
+
+    // Hangman diagram based on the number of incorrect guesses
+    switch (incorrectGuessCount) {
+        case 1:
+            System.out.println("  _______");
+            System.out.println(" |/      |");
+            System.out.println(" |      (_)");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println("_|___");
+            break;
+        case 2:
+            System.out.println("  _______");
+            System.out.println(" |/      |");
+            System.out.println(" |      (_)");
+            System.out.println(" |       |");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println("_|___");
+            break;
+        case 3:
+            System.out.println("  _______");
+            System.out.println(" |/      |");
+            System.out.println(" |      (_)");
+            System.out.println(" |      \\|");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println("_|___");
+            break;
+        case 4:
+            System.out.println("  _______");
+            System.out.println(" |/      |");
+            System.out.println(" |      (_)");
+            System.out.println(" |      \\|/");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println("_|___");
+            break;
+        case 5:
+            System.out.println("  _______");
+            System.out.println(" |/      |");
+            System.out.println(" |      (_)");
+            System.out.println(" |      \\|/");
+            System.out.println(" |       |");
+            System.out.println(" |");
+            System.out.println("_|___");
+            break;
+        case 6:
+            System.out.println("  _______");
+            System.out.println(" |/      |");
+            System.out.println(" |      (_)");
+            System.out.println(" |      \\|/");
+            System.out.println(" |       |");
+            System.out.println(" |      /");
+            System.out.println("_|___   ");
+            break;
+        case 7:
+            System.out.println("  _______");
+            System.out.println(" |/      |");
+            System.out.println(" |      (_)");
+            System.out.println(" |      \\|/");
+            System.out.println(" |       |");
+            System.out.println(" |      / \\");
+            System.out.println("_|___   ");
+            break;
     }
+}
+
 
     private void takeUserInput(String selectedWord) {
         Scanner scanner = new Scanner(System.in);
